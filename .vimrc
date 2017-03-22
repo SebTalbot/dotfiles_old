@@ -5,7 +5,10 @@
 "
 " Run YouCompleteMe install script:
 " cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --all
+" ./install.py
+"
+" Install TrnJS :
+" cd ~/.vim/bundle/tern_for_vim && npm install
 
 " VUNDLE CONFIG
 set nocompatible
@@ -21,15 +24,17 @@ Plugin 'Sclarki/neonwave.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 " - movement
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'Lokaltog/vim-easymotion'
+
 " - edit text
 Plugin 'tpope/vim-surround'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'vim-scripts/Gundo'
+
 " - error and snippets
-" Plugin 'AutoComplPop'
 Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets.git'
@@ -43,6 +48,7 @@ Plugin 'tpope/vim-fugitive'
 " -- webdev
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'ternjs/tern_for_vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'php.vim'
 
