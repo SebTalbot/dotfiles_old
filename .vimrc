@@ -51,12 +51,14 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'php.vim'
+Plugin 'itspriddle/vim-jquery'
+Plugin '1995eaton/vim-better-javascript-completion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " THEME AND UI  ----------------------------------------------------------------
-syntax on
+syntax enable
 let g:rehash256 = 1
 set encoding=utf-8
 set fileencoding=utf-8
@@ -135,6 +137,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
 hi EasyMotionTarget ctermbg=none ctermfg=cyan
+
+"" TernJS
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
 
 "" MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
