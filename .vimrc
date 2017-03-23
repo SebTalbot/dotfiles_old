@@ -19,9 +19,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/L9'
 
 " - look and interface
-Plugin 'tomasr/molokai'
-Plugin 'Sclarki/neonwave.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'liuchengxu/space-vim-dark'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -38,7 +37,6 @@ Plugin 'vim-scripts/Gundo'
 Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets.git'
-Plugin 'ajh17/VimCompletesMe'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 
@@ -47,19 +45,18 @@ Plugin 'tpope/vim-fugitive'
 
 " -- webdev
 Plugin 'mattn/emmet-vim'
-Plugin 'pangloss/vim-javascript'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'php.vim'
-Plugin 'itspriddle/vim-jquery'
-Plugin '1995eaton/vim-better-javascript-completion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " THEME AND UI  ----------------------------------------------------------------
+set t_Co=256
 syntax enable
-let g:rehash256 = 1
+set background=dark
 set encoding=utf-8
 set fileencoding=utf-8
 set wildmenu
@@ -70,8 +67,9 @@ set noerrorbells
 set novisualbell
 set cursorline
 set ttimeoutlen=10
-colorscheme molokai
-hi link EasyMotionTarget Comment
+colorscheme space-vim-dark
+hi Comment cterm=italic
+set termguicolors
 
 "Airline
 set laststatus=2
@@ -135,8 +133,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-
-hi EasyMotionTarget ctermbg=none ctermfg=cyan
 
 "" TernJS
 let g:tern_map_keys=1
