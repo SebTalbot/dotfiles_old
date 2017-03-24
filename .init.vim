@@ -1,10 +1,11 @@
 " Create a symbolic link of this config file to Neovim directory:
 " ln -s ~/.init.vim ~/.config/nvim/init.vim
+
 " You need to install vim-plug:
 " curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 "
-" Install every plugins with :PluginInstall or :PluginUpdate
+" Then install every plugins with :PluginInstall or :PluginUpdate
 "
 " Install TrnJS :
 " cd ~/.config/nvim/plugged/tern_for_vim && npm install
@@ -12,14 +13,15 @@
 " Run YouCompleteMe install script:
 " cd ~/.config/nvim/plugged/YouCompleteMe
 " ./install.py --tern-completer
-" 
+"
 " Install linters for Neomake:
 " -JavaScript:
 " sudo npm install -g jshint
 "
-" Don't forget to copy .tern-project in your JS project if it isn't a children
+" Don't forget to copy ~/.tern-project in your JS project if it isn't a children
 " of your home directory
 
+" Plugins  ---------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-scripts/L9'
 
@@ -50,6 +52,7 @@ Plug 'tpope/vim-fugitive'
 
 " - webdev
 Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax'
 Plug 'ternjs/tern_for_vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'shawncplus/phpcomplete.vim'
@@ -114,19 +117,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
-" SuperTab like snippets behavior.
-" imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-endif
-
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_warning_sign = {
@@ -167,6 +157,18 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Manipulate tabs
+nnoremap <leader>t<leader> :tabclose<CR>
+nnoremap <leader>tt :tabonly<CR>
+nnoremap <leader>tn :tabnew %<CR>
+
+" Manipulate buffers
+nnoremap <leader>b<leader> :bd<CR>
+
+nnoremap gb :bn<CR>
+nnoremap gB :bp<CR>
+
 
 " Paste global clipboard to another line
 nnoremap <leader>p o<ESC>"+p
