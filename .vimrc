@@ -103,6 +103,10 @@ set splitbelow
 set splitright
 set scrolloff=2
 
+" Python Path
+let g:python_host_prog = '/etc/python'
+let g:python3_host_prog = '/etc/python3'
+
 " Snippets
 autocmd filetype php set filetype=php.html
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
