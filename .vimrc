@@ -10,7 +10,7 @@
 " cd ~/.vim/bundle/YouCompleteMe
 " ./install.py --tern-completer
 "
-" Don't forget to copy .tern-project in your JS project if it isn't a children 
+" Don't forget to copy .tern-project in your JS project if it isn't a children
 " of your home directory
 
 " VUNDLE CONFIG
@@ -43,10 +43,10 @@ Plugin 'honza/vim-snippets.git'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 
-" - Git
+" - git
 Plugin 'tpope/vim-fugitive'
 
-" -- webdev
+" - webdev
 Plugin 'mattn/emmet-vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'jelera/vim-javascript-syntax'
@@ -71,9 +71,9 @@ set novisualbell
 set cursorline
 set ttimeoutlen=10
 colorscheme space-vim-dark
-hi Comment cterm=italic
+hi Comment cterm=bold
 
-"Airline
+" Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -102,7 +102,7 @@ set splitbelow
 set splitright
 set scrolloff=2
 
-"Snippets
+" Snippets
 autocmd filetype php set filetype=php.html
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
@@ -113,7 +113,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="vertical"
 
 " SuperTab like snippets behavior.
-"imap <expr><TAB>
+" imap <expr><TAB>
 " \ pumvisible() ? "\<C-n>" :
 " \ neosnippet#expandable_or_jumpable() ?
 " \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
@@ -125,7 +125,7 @@ if has('conceal')
   set conceallevel=2 concealcursor=niv
 endif
 
-""Syntastic
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -136,11 +136,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 
-"" TernJS
+" TernJS
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 
-"" MAPPING ---------------------------------------------------------------------
+" MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
 map <Leader>n :NERDTreeToggle<CR>
 nnoremap <leader>/ :nohlsearch<CR>
@@ -153,6 +153,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Z> <C-W>T
 
-"" Stay in visual mode after indent
+" Stay in visual mode after indent
 vnoremap < <gv
 vnoremap > >gv
