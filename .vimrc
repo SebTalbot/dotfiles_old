@@ -8,7 +8,10 @@
 "
 " Run YouCompleteMe install script:
 " cd ~/.vim/bundle/YouCompleteMe
-" ./install.py 
+" ./install.py --tern-completer
+"
+" Don't forget to copy .tern-project in your JS project if it isn't a children 
+" of your home directory
 
 " VUNDLE CONFIG
 set nocompatible
