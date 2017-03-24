@@ -6,3 +6,5 @@
 `alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 
 `config checkout`
+
+`config config --local status.showUntrackedFiles no`
