@@ -95,6 +95,7 @@ set softtabstop=4
 set tabstop=4
 set autoindent
 set incsearch
+set ignorecase smartcase
 set foldenable
 set foldmethod=indent
 set foldlevelstart=10
@@ -142,16 +143,28 @@ let g:tern_show_argument_hints='on_hold'
 
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
+
+" Open NERDTree, the file browser menu
 map <Leader>n :NERDTreeToggle<CR>
+
+" Hide search highlight
 nnoremap <leader>/ :nohlsearch<CR>
-nnoremap gV `[v`]
-nnoremap <Leader>u :GundoToggle<CR> "Super Undo aka undo-tree
+
+" Open Gundo, the undo tree
+nnoremap <Leader>u :GundoToggle<CR>
+
+" Start help command in vertical split
 nnoremap <leader>h :vert h<space>
+
+" Move between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <C-Z> <C-W>T
+
+" Paste global clipboard to another line
+nnoremap <leader>p o<ESC>"+p
+nnoremap <leader>P O<ESC>"+p
 
 " Stay in visual mode after indent
 vnoremap < <gv
