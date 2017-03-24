@@ -1,6 +1,6 @@
 " Create a symbolic link of this config file to Neovim directory:
 " ln -s ~/.init.vim ~/.config/nvim/init.vim
-
+"
 " You need to install vim-plug:
 " curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -58,11 +58,10 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'php.vim'
 
-call plug#end()            " required
-filetype plugin indent on    " required
+call plug#end()
+filetype plugin indent on
 
 " THEME AND UI  ----------------------------------------------------------------
-set t_Co=256
 set background=dark
 set encoding=utf-8
 set fileencoding=utf-8
@@ -76,6 +75,7 @@ set cursorline
 set timeoutlen=1000 ttimeoutlen=200
 colorscheme space-vim-dark
 hi Comment cterm=bold
+set colorcolumn=81
 
 " Airline
 set laststatus=2
@@ -84,10 +84,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='violet'
 
 " FEEL AND UTILITIES  ----------------------------------------------------------
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 set ignorecase "Ignore case when /searches
-"" set lazyredraw
 set nobackup
 set nowb
 set noswapfile
@@ -107,9 +104,11 @@ set scrolloff=2
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
-" Snippets
+" Filetype
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd filetype php set filetype=php.html
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Ultisnip
 let g:UltiSnipsExpandTrigger="<c-l>"
@@ -137,7 +136,7 @@ let g:neomake_javascript_enabled_makers = ['jshint']
 let g:tern_map_keys=1
 let g:tern_show_argument_hints='on_hold'
 
-" MAPPING ---------------------------------------------------------------------
+" MAPPING ----------------------------------------------------------------------
 let mapleader = "\<Space>"
 
 " Open NERDTree, the file browser menu
@@ -165,10 +164,8 @@ nnoremap <leader>tn :tabnew %<CR>
 
 " Manipulate buffers
 nnoremap <leader>b<leader> :bd<CR>
-
 nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
-
 
 " Paste global clipboard to another line
 nnoremap <leader>p o<ESC>"+p
