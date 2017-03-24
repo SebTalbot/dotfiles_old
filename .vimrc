@@ -3,12 +3,12 @@
 "
 " Install every plugins with :PluginInstall or :PluginUpdate
 "
-" Run YouCompleteMe install script:
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py
-"
 " Install TrnJS :
 " cd ~/.vim/bundle/tern_for_vim && npm install
+"
+" Run YouCompleteMe install script:
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py 
 
 " VUNDLE CONFIG
 set nocompatible
@@ -69,7 +69,6 @@ set cursorline
 set ttimeoutlen=10
 colorscheme space-vim-dark
 hi Comment cterm=italic
-set termguicolors
 
 "Airline
 set laststatus=2
