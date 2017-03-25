@@ -1,4 +1,6 @@
-" Create a symbolic link of this config file to Neovim directory:
+" Create a symbolic link of this config file to Neovim directory (create it if 
+" it doesn't exist):
+" mkdir ~/.config/nvim
 " ln -s ~/.init.vim ~/.config/nvim/init.vim
 "
 " You need to install vim-plug:
@@ -76,6 +78,7 @@ set timeoutlen=1000 ttimeoutlen=200
 colorscheme space-vim-dark
 hi Comment cterm=bold
 set colorcolumn=81
+highlight ColorColumn ctermbg=234
 
 " Airline
 set laststatus=2
