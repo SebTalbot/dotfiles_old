@@ -1,3 +1,5 @@
+" I'm now using NeoVIM, my recent config file is .init.vim
+"
 " You need to install Vundle first:
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "
