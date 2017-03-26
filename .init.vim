@@ -46,7 +46,7 @@ Plug 'Lokaltog/vim-easymotion'
 " - edit text
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
-Plug 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 
 " - error and snippets
 Plug 'neomake/neomake'
@@ -115,6 +115,11 @@ set splitbelow
 set splitright
 set scrolloff=2
 
+" Mundo
+" Enable persistent undo so that undo history persists across vim sessions
+set undofile
+set undodir=~/.nvim/undo
+
 " Python Path
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
@@ -176,8 +181,8 @@ map <Leader>n :NERDTreeToggle<CR>
 " Hide search highlight
 nnoremap <leader>/ :nohlsearch<CR>
 
-" Open Gundo, the undo tree
-nnoremap <Leader>u :GundoToggle<CR>
+" Open Mundo, the undo tree
+nnoremap <Leader>u :MundoToggle<CR>
 
 " Start help command in vertical split
 nnoremap <leader>h :vert h<space>
