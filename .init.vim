@@ -1,4 +1,4 @@
-" Create a symbolic link of this config file to Neovim directory (create it if 
+" Create a symbolic link of this config file to Neovim directory (create it if
 " it doesn't exist):
 " mkdir ~/.config/nvim
 " ln -s ~/.init.vim ~/.config/nvim/init.vim
@@ -46,7 +46,7 @@ Plug 'sjl/gundo.vim'
 Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'jiangmiao/auto-pairs'
+Plug 'Raimondi/delimitMate'
 Plug 'Valloric/YouCompleteMe'
 
 " - git
@@ -54,6 +54,8 @@ Plug 'tpope/vim-fugitive'
 
 " - webdev
 Plug 'mattn/emmet-vim'
+Plug 'groenewege/vim-less'
+Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'ternjs/tern_for_vim'
 Plug 'jelera/vim-javascript-syntax'
@@ -108,10 +110,10 @@ let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
 " Filetype
-
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd filetype php set filetype=php.html
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Ultisnip
 let g:UltiSnipsExpandTrigger="<c-l>"
@@ -134,6 +136,22 @@ let g:neomake_javascript_jshint_maker = {
     \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
     \ }
 let g:neomake_javascript_enabled_makers = ['jshint']
+
+" YouCompleteMe
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_semantic_triggers =  {
+\   'c' : ['->', '.'],
+\   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+\             're!\[.*\]\s'],
+\   'ocaml' : ['.', '#'],
+\   'cpp,objcpp' : ['->', '.', '::'],
+\   'perl' : ['->'],
+\   'php' : ['->', '::'],
+\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+\   'ruby' : ['.', '::'],
+\   'lua' : ['.', ':'],
+\   'erlang' : [':'],
+\ }
 
 " TernJS
 let g:tern_map_keys=1
