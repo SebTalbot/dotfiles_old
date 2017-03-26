@@ -134,7 +134,7 @@ parse_git_branch() {
 }
 #PS1='\[\033[01;32m\]$(__git_ps1)\[\033[01;36m\]>\[\033[01;35m\]\w\[\033[01;36m\]>\[\033[00m\]' 
 
-PS1='\[\033[46;1;30m\] \w\[\033[45;1;36m\]\[\] \[\033[1;30m\]\[\] $(__git_ps1)\[\033[40;1;35m\] \[\033[00m\]'
+PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\]\[\] \[\033[30m\]\[\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
 
 # No CTRL+S
 stty -ixon
@@ -149,4 +149,5 @@ export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools 
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
+# Alias to manage dotfiles
 alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
