@@ -151,3 +151,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # Alias to manage dotfiles
 alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
+
+# Alias for NeoVIM
+alias vim="nvim"
+alias vi="nvim"
