@@ -9,6 +9,9 @@
 "
 " Then install every plugins with :PluginInstall or :PluginUpdate
 "
+" Some plugins require python. If an error about python appear, execute:
+" sudo pip install neovim
+"
 " Install TrnJS :
 " cd ~/.config/nvim/plugged/tern_for_vim && npm install
 "
@@ -19,6 +22,8 @@
 " Install linters for Neomake:
 " -JavaScript:
 " sudo npm install -g jshint
+" -Python:
+" sudo pip install jedi
 "
 " Don't forget to copy ~/.tern-project in your JS project if it isn't a children
 " of your home directory
@@ -32,6 +37,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'thirtythreeforty/lessspace.vim'
 
 " - movement
 Plug 'vim-scripts/FuzzyFinder'
@@ -51,6 +57,10 @@ Plug 'Valloric/YouCompleteMe'
 
 " - git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" - python
+Plug 'davidhalter/jedi-vim'
 
 " - webdev
 Plug 'mattn/emmet-vim'
