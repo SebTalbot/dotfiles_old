@@ -114,6 +114,7 @@ set foldlevelstart=10
 set splitbelow
 set splitright
 set scrolloff=2
+set hidden
 
 " Mundo
 " Enable persistent undo so that undo history persists across vim sessions
@@ -206,6 +207,9 @@ nnoremap gB :bp<CR>
 " Paste global clipboard to another line
 nnoremap <leader>p o<ESC>"+p
 nnoremap <leader>P O<ESC>"+p
+
+" Highlight same variable
+nnoremap <leader>* *``
 
 " Stay in visual mode after indent
 vnoremap < <gv
