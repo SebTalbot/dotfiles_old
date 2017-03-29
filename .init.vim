@@ -136,6 +136,7 @@ let g:UltiSnipsEditSplit="vertical"
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
+hi link NeomakeError Error
 let g:neomake_warning_sign = {
   \ 'text': 'W',
   \ 'texthl': 'WarningMsg',
