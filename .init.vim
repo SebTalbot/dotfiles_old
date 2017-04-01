@@ -9,8 +9,14 @@
 "
 " Then install every plugins with :PluginInstall or :PluginUpdate
 "
-" Some plugins require python. If an error about python appear, execute:
-" sudo pip install neovim
+" Installing python
+if(!has("python"))
+	call system(expand("pip2 install --user --upgrade neovim"))
+endif
+
+if(!has("python3"))
+	call system(expand("pip3 install --user --upgrade neovim"))
+endif
 "
 " Install TrnJS :
 " cd ~/.config/nvim/plugged/tern_for_vim && npm install
