@@ -18,8 +18,12 @@ if(!has("python3"))
 	call system(expand("pip3 install --user --upgrade neovim"))
 endif
 "
-" Install TrnJS :
-" npm install -g tern
+" Install Tern
+" cd ~/.config/nvim/plugged/tern_for_vim && npm install
+"
+" Run YouCompleteMe install script:
+" cd ~/.config/nvim/plugged/YouCompleteMe
+" ./install.py --tern-completer
 "
 " Install linters for Neomake:
 " -JavaScript:
@@ -55,9 +59,9 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Raimondi/delimitMate'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'zchee/deoplete-jedi'
+Plug 'Valloric/YouCompleteMe'
+Plug 'ternjs/tern_for_vim'
+Plug 'davidhalter/jedi-vim'
 
 " - git
 Plug 'tpope/vim-fugitive'
@@ -135,8 +139,8 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Ultisnip
 let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Neomake
@@ -156,8 +160,25 @@ let g:neomake_javascript_jshint_maker = {
     \ }
 let g:neomake_javascript_enabled_makers = ['jshint']
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
+" YouCompleteMe
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_semantic_triggers =  {
+\   'c' : ['->', '.'],
+\   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
+\             're!\[.*\]\s'],
+\   'ocaml' : ['.', '#'],
+\   'cpp,objcpp' : ['->', '.', '::'],
+\   'perl' : ['->'],
+\   'php' : ['->', '::'],
+\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
+\   'ruby' : ['.', '::'],
+\   'lua' : ['.', ':'],
+\   'erlang' : [':'],
+\ }
+
+" TernJS
+let g:tern_map_keys=1
+let g:tern_show_argument_hints='on_hold'
 
 " MAPPING ----------------------------------------------------------------------
 let mapleader = "\<Space>"
