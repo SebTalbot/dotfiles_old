@@ -19,11 +19,7 @@ if(!has("python3"))
 endif
 "
 " Install TrnJS :
-" cd ~/.config/nvim/plugged/tern_for_vim && npm install
-"
-" Run YouCompleteMe install script:
-" cd ~/.config/nvim/plugged/YouCompleteMe
-" ./install.py --tern-completer
+" npm install -g tern
 "
 " Install linters for Neomake:
 " -JavaScript:
@@ -59,21 +55,19 @@ Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'Raimondi/delimitMate'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'carlitux/deoplete-ternjs'
+Plug 'zchee/deoplete-jedi'
 
 " - git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-
-" - python
-Plug 'davidhalter/jedi-vim'
 
 " - webdev
 Plug 'mattn/emmet-vim'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'ternjs/tern_for_vim'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'php.vim'
@@ -128,6 +122,8 @@ set undofile
 set undodir=~/.nvim/undo
 
 " Python Path
+let g:python_host_skip_check=1
+let g:python3_host_skip_check=1
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
@@ -139,12 +135,13 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Ultisnip
 let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
+hi link NeomakeError Error
 let g:neomake_warning_sign = {
   \ 'text': 'W',
   \ 'texthl': 'WarningMsg',
@@ -159,25 +156,8 @@ let g:neomake_javascript_jshint_maker = {
     \ }
 let g:neomake_javascript_enabled_makers = ['jshint']
 
-" YouCompleteMe
-let g:ycm_use_ultisnips_completer = 1
-let g:ycm_semantic_triggers =  {
-\   'c' : ['->', '.'],
-\   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
-\             're!\[.*\]\s'],
-\   'ocaml' : ['.', '#'],
-\   'cpp,objcpp' : ['->', '.', '::'],
-\   'perl' : ['->'],
-\   'php' : ['->', '::'],
-\   'cs,java,javascript,typescript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-\   'ruby' : ['.', '::'],
-\   'lua' : ['.', ':'],
-\   'erlang' : [':'],
-\ }
-
-" TernJS
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " MAPPING ----------------------------------------------------------------------
 let mapleader = "\<Space>"
