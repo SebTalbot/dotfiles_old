@@ -155,3 +155,6 @@ alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$U
 # Alias for NeoVIM
 alias vim="nvim"
 alias vi="nvim"
+
+# Alias terminal
+alias cb="cd .."
