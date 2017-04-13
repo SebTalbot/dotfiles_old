@@ -41,6 +41,7 @@ Plug 'vim-scripts/L9'
 " - look and interface
 Plug 'scrooloose/nerdtree'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'thirtythreeforty/lessspace.vim'
@@ -91,9 +92,8 @@ set noerrorbells
 set novisualbell
 set cursorline
 set timeoutlen=1000 ttimeoutlen=200
-colorscheme space-vim-dark
+colorscheme monoacc
 hi Comment cterm=bold
-set colorcolumn=81
 highlight ColorColumn ctermbg=234
 
 " Airline
@@ -221,3 +221,6 @@ nnoremap <leader>* *``
 " Stay in visual mode after indent
 vnoremap < <gv
 vnoremap > >gv
+
+" Terminal normal mode
+tnoremap <Esc> <C-\><C-n>

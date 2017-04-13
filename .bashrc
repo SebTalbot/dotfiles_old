@@ -87,10 +87,6 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -134,7 +130,7 @@ parse_git_branch() {
 }
 #PS1='\[\033[01;32m\]$(__git_ps1)\[\033[01;36m\]>\[\033[01;35m\]\w\[\033[01;36m\]>\[\033[00m\]' 
 
-PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\]\[\] \[\033[30m\]\[\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
+PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
 
 # No CTRL+S
 stty -ixon
@@ -155,3 +151,10 @@ alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$U
 # Alias for NeoVIM
 alias vim="nvim"
 alias vi="nvim"
+
+# Alias terminal
+alias l='ls --group-directories-first -la'
+alias ll='ls -alF'
+alias la='ls -A'
+alias cb="cd .."
+alias t="tree --dirsfirst -f"
