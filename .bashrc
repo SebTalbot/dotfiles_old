@@ -119,7 +119,8 @@ PERL_MB_OPT="--install_base \"/home/snowl/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/snowl/perl5"; export PERL_MM_OPT;
 
 # 250 Colors for VIM
-export VISUAL="vim" 
+export VISUAL="nvim"
+export EDITOR="$VISUAL"
 export TERM=xterm-256color
 
 #Custom Prompt
