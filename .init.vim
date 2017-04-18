@@ -45,6 +45,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'thirtythreeforty/lessspace.vim'
+Plug 'rbgrouleff/bclose.vim'
 
 " - movement
 Plug 'vim-scripts/FuzzyFinder'
@@ -92,7 +93,7 @@ set noerrorbells
 set novisualbell
 set cursorline
 set timeoutlen=1000 ttimeoutlen=200
-colorscheme monoacc
+colorscheme madeofcode
 hi Comment cterm=bold
 highlight ColorColumn ctermbg=234
 
@@ -207,13 +208,17 @@ nnoremap <leader>tt :tabonly<CR>
 nnoremap <leader>tn :tabnew %<CR>
 
 " Manipulate buffers
-nnoremap <leader>b<leader> :bd<CR>
+nnoremap <leader>b<leader> :Bclose<CR>
 nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
 
 " Paste global clipboard to another line
 nnoremap <leader>p o<ESC>"+p
 nnoremap <leader>P O<ESC>"+p
+
+" Bouger lignes
+nnoremap <A-k> ddkP
+nnoremap <A-j> ddp
 
 " Highlight same variable
 nnoremap <leader>* *``
