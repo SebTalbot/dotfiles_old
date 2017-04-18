@@ -92,7 +92,7 @@ set noerrorbells
 set novisualbell
 set cursorline
 set timeoutlen=1000 ttimeoutlen=200
-colorscheme monoacc
+colorscheme vibrantink
 hi Comment cterm=bold
 highlight ColorColumn ctermbg=234
 
