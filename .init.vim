@@ -57,6 +57,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'simnalamburt/vim-mundo'
 
 " - error and snippets
+Plug 'sheerun/vim-polyglot'
 Plug 'neomake/neomake'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -116,7 +117,7 @@ set incsearch
 set ignorecase smartcase
 set foldenable
 set foldmethod=indent
-set foldlevelstart=10
+set foldlevelstart=20
 set splitbelow
 set splitright
 set scrolloff=2
@@ -197,15 +198,13 @@ nnoremap <Leader>u :MundoToggle<CR>
 " Start help command in vertical split
 nnoremap <leader>h :vert h<space>
 
-" Move between windows
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Manipulate windows
 nnoremap <leader>w<leader> <C-W>q
 nnoremap <leader>wv <C-W>v
+nnoremap <leader>wj <C-W><C-J>
+nnoremap <leader>wk <C-W><C-K>
+nnoremap <leader>wl <C-W><C-L>
+nnoremap <leader>wh <C-W><C-H>
 
 " Manipulate tabs
 nnoremap <leader>t<leader> :tabclose<CR>
