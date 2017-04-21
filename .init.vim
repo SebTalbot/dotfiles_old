@@ -212,6 +212,7 @@ nnoremap <leader>tt :tabonly<CR>
 nnoremap <leader>tn :tabnew %<CR>
 
 " Manipulate buffers
+nnoremap <leader>bb :ls<CR>:b<space>
 nnoremap <leader>b<leader> :Bclose<CR>
 nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
@@ -221,8 +222,10 @@ nnoremap <leader>p o<ESC>"+p
 nnoremap <leader>P O<ESC>"+p
 
 " Bouger lignes
-nnoremap <A-k> ddkP
-nnoremap <A-j> ddp
+nnoremap <C-K> ddkP
+nnoremap <C-J> ddp
+vnoremap <C-K> dkP`[V`]
+vnoremap <C-J> dp`[V`]
 
 " Highlight same variable
 nnoremap <leader>* *``
