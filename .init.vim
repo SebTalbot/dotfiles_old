@@ -179,10 +179,6 @@ let g:ycm_semantic_triggers =  {
 \   'erlang' : [':'],
 \ }
 
-" TernJS
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-
 " MAPPING ----------------------------------------------------------------------
 let mapleader = "\<Space>"
 
@@ -201,6 +197,7 @@ nnoremap <leader>h :vert h<space>
 " Manipulate windows
 nnoremap <leader>w<leader> <C-W>q
 nnoremap <leader>wv <C-W>v
+nnoremap <leader>ws <C-W>s
 nnoremap <leader>wj <C-W><C-J>
 nnoremap <leader>wk <C-W><C-K>
 nnoremap <leader>wl <C-W><C-L>
@@ -227,12 +224,13 @@ nnoremap <C-J> ddp
 vnoremap <C-K> dkP`[V`]
 vnoremap <C-J> dp`[V`]
 
-" Highlight same variable
-nnoremap <leader>* *``
-
 " Stay in visual mode after indent
 vnoremap < <gv
 vnoremap > >gv
 
+" Highlight same variable
+nnoremap <leader>* *``
+
 " Manipulate terminal
 tnoremap <Esc> <C-\><C-n>
+tnoremap <C-D> <c-\><c-n>:Bclose!<CR>
