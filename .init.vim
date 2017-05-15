@@ -77,7 +77,6 @@ Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'shawncplus/phpcomplete.vim'
-Plug 'php.vim'
 
 call plug#end()
 filetype plugin indent on
