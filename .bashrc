@@ -129,9 +129,11 @@ source ~/.git-prompt.sh
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
-#PS1='\[\033[01;32m\]$(__git_ps1)\[\033[01;36m\]>\[\033[01;35m\]\w\[\033[01;36m\]>\[\033[00m\]' 
-
+# Powerline prompt
 PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
+
+# Simple prompt, comment powerline and uncomment this line if powerline looks weird
+#PS1='\[\033[01;32m\]\w\[\033[01;36m\]>\[\033[01;35m\]$(__git_ps1)\[\033[01;36m\]>\[\033[00m\]' 
 
 # No CTRL+S
 stty -ixon
@@ -148,10 +150,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # Alias to manage dotfiles
 alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$USER'
-
-# Alias for NeoVIM
-alias vim="nvim"
-alias vi="nvim"
 
 # Alias terminal
 alias l='ls --group-directories-first -la'
