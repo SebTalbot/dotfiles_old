@@ -1,8 +1,7 @@
-"<leader> THEME AND UI  ----------------------------------------------------------------
+" THEME AND UI  ----------------------------------------------------------------
 syntax enable
 set encoding=utf-8
 set fileencoding=utf-8
-set colorcolumn=81
 set wildmenu
 set relativenumber
 set hlsearch
@@ -12,6 +11,10 @@ set novisualbell
 set cursorline
 set ttimeoutlen=10
 hi Comment cterm=bold
+let g:molokai_original = 1
+colorscheme molokai
+set colorcolumn=81
+highlight ColorColumn ctermbg=235
 
 " FEEL AND UTILITIES  ----------------------------------------------------------
 set autoread
