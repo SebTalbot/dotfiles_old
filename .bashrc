@@ -119,7 +119,7 @@ PERL_MB_OPT="--install_base \"/home/snowl/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/snowl/perl5"; export PERL_MM_OPT;
 
 # 250 Colors for VIM
-export VISUAL="nvim"
+export VISUAL="vim"
 export EDITOR="$VISUAL"
 export TERM=xterm-256color
 
@@ -153,6 +153,7 @@ alias config='/usr/bin/git --git-dir=/home/$USER/.dotfiles/ --work-tree=/home/$U
 
 # Alias terminal
 alias l='ls --group-directories-first -la'
+alias lg='ls --group-directories-first -l'
 alias ll='ls -alF'
 alias la='ls -A'
 alias cb="cd .."
