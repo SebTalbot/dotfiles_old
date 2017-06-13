@@ -25,6 +25,7 @@
                       auto-completion-enable-help-tooltip 'manual
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t)
+     (shell :variables shell-default-term-shell "/bin/bash")
      better-defaults
      emacs-lisp
      git
