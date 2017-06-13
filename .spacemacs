@@ -8,11 +8,19 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     vimscript
+     typescript
+     ruby
+     ruby-on-rails
+     react
+     django
+     python
+     html
+     sql
      javascript
      php
      colors
      helm
-     ;; auto-completion
      (auto-completion :variables
                       auto-completion-enable-help-tooltip 'manual
                       auto-completion-enable-sort-by-usage t
