@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+  # We have color support; assume it's compliant with Ecma-48
+  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
+  color_prompt=yes
     else
-	color_prompt=
+  color_prompt=
     fi
 fi
 
@@ -133,7 +133,14 @@ parse_git_branch() {
 PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
 
 # Simple prompt, comment powerline and uncomment this line if powerline looks weird
-#PS1='\[\033[01;32m\]\w\[\033[01;36m\]>\[\033[01;35m\]$(__git_ps1)\[\033[01;36m\]>\[\033[00m\]' 
+#PS1='\[\033[01;32m\]\w\[\033[01;36m\]>\[\033[01;35m\]$(__git_ps1)\[\033[01;36m\]>\[\033[00m\]'
+
+# Keep it simple if running in emacs.
+case "$EMACS" in
+    t)
+    PROMPT_COMMAND=
+    PS1="\w <\$(__git_ps1)> "
+esac
 
 # No CTRL+S
 stty -ixon
@@ -144,8 +151,8 @@ if which ruby >/dev/null && which gem >/dev/null; then
 fi
 
 # Android develop
-export ANDROID_HOME=~/Android/Sdk 
-export PATH=${PATH}:${ANDROID_HOME}/tools 
+export ANDROID_HOME=~/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # Alias to manage dotfiles
