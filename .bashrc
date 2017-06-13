@@ -165,3 +165,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias cb="cd .."
 alias t="tree --dirsfirst -f"
+
+# Alias Node.js
+alias ng="npm list -g --depth=0 2>/dev/null"
+alias nl="npm list --depth=0 2>/dev/null"
