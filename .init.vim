@@ -9,8 +9,10 @@ let g:python3_host_prog = '/usr/bin/python3'
 " Plugins  ---------------------------------------------------------------------
 call plug#begin('~/.config/nvim/plugged')
 
-" THEME AND UI
+" THEMES AND UI
 Plug 'morhetz/gruvbox'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
@@ -40,8 +42,10 @@ Plug 'Shougo/neco-vim'
 "" CSS
 Plug 'othree/csscomplete.vim'
 "" PHP
+Plug 'StanAngeloff/php.vim'
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 "" JavaScript
+Plug 'jelera/vim-javascript-syntax'
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/ncm-flow'
 "" Python
@@ -65,8 +69,8 @@ set novisualbell
 set cursorline
 set ttimeoutlen=10
 hi Comment cterm=bold
-colorscheme gruvbox
 set background=dark
+colorscheme space-vim-dark
 set colorcolumn=81
 highlight ColorColumn ctermbg=235
 
@@ -111,6 +115,14 @@ set cot-=preview
 autocmd FileType php set makeprg=php\ -l\ %
 autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
 autocmd FileType php LanguageClientStart
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
 
 
 " PYTHON
@@ -124,7 +136,7 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='term'
+let g:airline_theme='violet'
 
 " nvim-completion-manager
 let g:cm_refresh_length = 1
