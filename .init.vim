@@ -1,13 +1,7 @@
 " Dependencies -----------------------------------------------------------------
-"
-" You need to install vim-plug:
-" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" You need to run ./scripts/install-nvim-dependencies.sh
 "
 " Then install every plugins with :PluginInstall or :PluginUpdate
-"
-" Python dependencies:
-" pip3 install --user neovim jedi mistune psutil setproctitle
 "
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
@@ -115,8 +109,6 @@ autocmd FileType php set makeprg=php\ -l\ %
 autocmd FileType php set errorformat=%m\ in\ %f\ on\ line\ %l
 autocmd FileType php LanguageClientStart
 
-" HTML
-autocmd FileType html,xhtml setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " PYTHON
 let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'jedi')
