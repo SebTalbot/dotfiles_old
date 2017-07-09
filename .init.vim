@@ -18,6 +18,7 @@ Plug 'airblade/vim-gitgutter'
 " APPLICATIONS
 Plug 'simnalamburt/vim-mundo'
 Plug 'kien/ctrlp.vim'
+Plug 'jreybert/vimagit'
 
 " COMMANDS
 Plug 'rbgrouleff/bclose.vim'
@@ -172,6 +173,7 @@ tnoremap <C-D> <c-\><c-n>:Bclose!<CR>
 " Applications A-
 nnoremap <Leader>au :MundoToggle<CR>
 nnoremap <Leader>ap :CtrlP<CR>
+nnoremap <Leader>ag :Magit<CR>
 
 " Manipulate windows W-
 nnoremap <leader>wd <C-W>q
