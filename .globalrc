@@ -1,0 +1,23 @@
+common:\
+	:skip=GPATH,GTAGS,GRTAGS,GSYMS,HTML/,HTML.pub/,html/,tags,TAGS,ID,y.tab.c,y.tab.h,cscope.out,cscope.po.out,cscope.in.out,SCCS/,RCS/,CVS/,CVSROOT/,{arch}/,autom4te.cache/:
+
+gtags:\
+	:tc=common:\
+	:langmap=c\:.c.h,yacc\:.y,asm\:.s.S,java\:.java,cpp\:.c++.cc.cpp.cxx.hxx.hpp.C.H,php\:.php.php3.phtml:
+
+pygments-parser|Pygments plug-in parser:\
+    :tc=common:\
+    :langmap=ABAP\:.abap:\
+    :langmap=ANTLR\:.G.g:\
+    :langmap=ActionScript3\:.as:\
+	(snip)
+    :langmap=XQuery\:.xqy.xquery.xq.xql.xqm:\
+    :langmap=XSLT\:.xsl.xslt.xpl:\
+    :langmap=Xtend\:.xtend:\
+    :gtags_parser=ABAP\:/usr/local/lib/gtags/pygments-parser.la:\
+    :gtags_parser=ANTLR\:/usr/local/lib/gtags/pygments-parser.la:\
+    :gtags_parser=ActionScript3\:/usr/local/lib/gtags/pygments-parser.la:\
+	(snip)
+    :gtags_parser=XQuery\:/usr/local/lib/gtags/pygments-parser.la:\
+    :gtags_parser=XSLT\:/usr/local/lib/gtags/pygments-parser.la:\
+    :gtags_parser=Xtend\:/usr/local/lib/gtags/pygments-parser.la:
