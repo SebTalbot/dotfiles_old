@@ -133,43 +133,17 @@ let g:UltiSnipsJumpForwardTrigger	= "<C-N>"
 let g:UltiSnipsJumpBackwardTrigger	= "<C-P>"
 let g:UltiSnipsRemoveSelectModeMappings = 0
 
+" GitGutter
+let g:gitgutter_map_keys = 0
+
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
-
-" Applications
-nnoremap <Leader>au :MundoToggle<CR>
-nnoremap <Leader>ap :CtrlP<CR>
 
 " Hide search highlight
 nnoremap <leader>/ :nohlsearch<CR>
 
 " Start help command in vertical split
 nnoremap <leader>h :vert h<space>
-
-" Manipulate windows
-nnoremap <leader>wd <C-W>q
-nnoremap <leader>wv <C-W>v
-nnoremap <leader>ws <C-W>s
-nnoremap <leader>wj <C-W><C-J>
-nnoremap <leader>wk <C-W><C-K>
-nnoremap <leader>wl <C-W><C-L>
-nnoremap <leader>wh <C-W><C-H>
-nnoremap <leader>wJ <C-W><S-J>
-nnoremap <leader>wK <C-W><S-K>
-nnoremap <leader>wL <C-W><S-L>
-nnoremap <leader>wH <C-W><S-H>
-
-" Manipulate tabs
-nnoremap <leader>td :tabclose<CR>
-nnoremap <leader>tt :tabonly<CR>
-nnoremap <leader>tn :tabnew %<CR>
-
-" Manipulate buffers
-nnoremap <leader>bb :ls<CR>:b<space>
-nnoremap <leader>bt <C-^>
-nnoremap <leader>bd :Bclose<CR>
-nnoremap gb :bn<CR>
-nnoremap gB :bp<CR>
 
 " Paste global clipboard to another line
 nnoremap <leader>p o<ESC>"+p
@@ -192,6 +166,35 @@ nnoremap <leader>* *``
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-D> <c-\><c-n>:Bclose!<CR>
 
-" Toggling between languages
+" Applications A-
+nnoremap <Leader>au :MundoToggle<CR>
+nnoremap <Leader>ap :CtrlP<CR>
+
+" Manipulate windows W-
+nnoremap <leader>wd <C-W>q
+nnoremap <leader>wv <C-W>v
+nnoremap <leader>ws <C-W>s
+nnoremap <leader>wj <C-W><C-J>
+nnoremap <leader>wk <C-W><C-K>
+nnoremap <leader>wl <C-W><C-L>
+nnoremap <leader>wh <C-W><C-H>
+nnoremap <leader>wJ <C-W><S-J>
+nnoremap <leader>wK <C-W><S-K>
+nnoremap <leader>wL <C-W><S-L>
+nnoremap <leader>wH <C-W><S-H>
+
+" Manipulate tabs T-
+nnoremap <leader>td :tabclose<CR>
+nnoremap <leader>tt :tabonly<CR>
+nnoremap <leader>tn :tabnew %<CR>
+
+" Manipulate buffers B-
+nnoremap <leader>bb :ls<CR>:b<space>
+nnoremap <leader>bt <C-^>
+nnoremap <leader>bd :Bclose<CR>
+nnoremap gb :bn<CR>
+nnoremap gB :bp<CR>
+
+" Toggling between languages L-
 nnoremap <leader>lh :set ft=html<CR>
 nnoremap <leader>lp :set ft=php<CR>
