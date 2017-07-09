@@ -28,7 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 
 " AUTOCOMP AND SNIPPETS
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'roxma/nvim-completion-manager'
 Plug 'SirVer/ultisnips'
 Plug 'jsfaint/gen_tags.vim'
@@ -66,8 +66,8 @@ set fileencoding=utf-8
 set wildmenu
 set relativenumber
 set hlsearch
-set showmatch
 set noerrorbells
+set showmatch
 set novisualbell
 set cursorline
 set ttimeoutlen=10
@@ -157,11 +157,6 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " GitGutter
 let g:gitgutter_map_keys = 0
 
-" Syntastic
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_checkers = ['jsxhint']
-let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
-
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
 
@@ -195,7 +190,7 @@ nnoremap <leader>* *``
 tnoremap <Esc> <C-\><C-n>
 tnoremap <C-D> <c-\><c-n>:Bclose!<CR>
 
-" Applications A-
+" Applications toggle A-
 nnoremap <Leader>au :MundoToggle<CR>
 nnoremap <Leader>ap :CtrlP<CR>
 nnoremap <Leader>ag :Magit<CR>
@@ -224,6 +219,10 @@ nnoremap <leader>bt <C-^>
 nnoremap <leader>bd :Bclose<CR>
 nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
+
+" Error E-
+nnoremap <leader>ek :ALEPrevious<CR>
+nnoremap <leader>ej :ALENext<CR>
 
 " Toggling between languages L-
 nnoremap <leader>lh :set ft=html<CR>
