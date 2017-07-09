@@ -35,7 +35,6 @@ Plug 'Shougo/neco-syntax'
 
 "" General
 Plug 'honza/vim-snippets'
-
 "" VimScript
 Plug 'Shougo/neco-vim'
 "" CSS
@@ -142,6 +141,9 @@ let g:gitgutter_map_keys = 0
 
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
+
+" Disable C-Z
+nnoremap <c-z> <nop>
 
 " Hide search highlight
 nnoremap <leader>/ :nohlsearch<CR>
