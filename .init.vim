@@ -32,6 +32,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
 
+"" General
+Plug 'honza/vim-snippets'
+
 "" VimScript
 Plug 'Shougo/neco-vim'
 "" CSS
