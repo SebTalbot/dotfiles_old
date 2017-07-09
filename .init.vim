@@ -28,6 +28,7 @@ Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
 
 " AUTOCOMP AND SNIPPETS
+Plug 'vim-syntastic/syntastic'
 Plug 'roxma/nvim-completion-manager'
 Plug 'SirVer/ultisnips'
 Plug 'jsfaint/gen_tags.vim'
@@ -48,6 +49,8 @@ Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer ru
 Plug 'jelera/vim-javascript-syntax'
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/ncm-flow'
+""" React.js
+Plug 'mxw/vim-jsx'
 "" Python
 Plug 'davidhalter/jedi-vim'
 
@@ -131,6 +134,9 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'psutil')
 let g:python_support_python3_requirements = add(get(g:,'python_support_python3_requirements',[]),'setproctitle')
 
+" JavaScript
+let g:jsx_ext_required = 0
+
 " PLUGINS ----------------------------------------------------------------------
 " Airline
 set laststatus=2
@@ -150,6 +156,11 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 
 " GitGutter
 let g:gitgutter_map_keys = 0
+
+" Syntastic
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['jsxhint']
+let g:syntastic_javascript_jsxhint_exec = 'jsx-jshint-wrapper'
 
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
@@ -217,3 +228,4 @@ nnoremap gB :bp<CR>
 " Toggling between languages L-
 nnoremap <leader>lh :set ft=html<CR>
 nnoremap <leader>lp :set ft=php<CR>
+nnoremap <leader>lj :set ft=javascript<CR>
