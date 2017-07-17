@@ -130,7 +130,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 # Powerline prompt
-PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
+PS1='\[\033[44;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;34m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
 
 # Simple prompt, comment powerline and uncomment this line if powerline looks weird
 #PS1='\[\033[01;32m\]\w\[\033[01;36m\]>\[\033[01;35m\]$(__git_ps1)\[\033[01;36m\]>\[\033[00m\]'
@@ -165,6 +165,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias cb="cd .."
 alias t="tree --dirsfirst -f"
+alias r="ranger"
 
 # Alias Node.js
 alias ng="npm list -g --depth=0 2>/dev/null"
