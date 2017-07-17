@@ -16,6 +16,7 @@ Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 
 " APPLICATIONS
 Plug 'simnalamburt/vim-mundo'
@@ -31,7 +32,6 @@ Plug 'tomtom/tcomment_vim'
 Plug 'w0rp/ale'
 Plug 'roxma/nvim-completion-manager'
 Plug 'SirVer/ultisnips'
-Plug 'jsfaint/gen_tags.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
@@ -192,6 +192,7 @@ tnoremap <C-D> <c-\><c-n>:Bclose!<CR>
 
 " Applications toggle A-
 nnoremap <Leader>au :MundoToggle<CR>
+nnoremap <Leader>an :NERDTreeToggle<CR>
 nnoremap <Leader>ap :CtrlP<CR>
 nnoremap <Leader>ag :Magit<CR>
 
