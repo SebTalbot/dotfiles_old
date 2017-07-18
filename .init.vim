@@ -16,6 +16,7 @@ Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdtree'
 
 " APPLICATIONS
 Plug 'simnalamburt/vim-mundo'
@@ -157,6 +158,14 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " GitGutter
 let g:gitgutter_map_keys = 0
 
+" Ale
+let g:ale_javascript_eslint_executable = 'eslint'
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_javascript_jshint_executable = ''
+let g:ale_javascript_jshint_use_global = 0
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
+
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
 
@@ -192,6 +201,7 @@ tnoremap <C-D> <c-\><c-n>:Bclose!<CR>
 
 " Applications toggle A-
 nnoremap <Leader>au :MundoToggle<CR>
+nnoremap <Leader>an :NERDTreeToggle<CR>
 nnoremap <Leader>ap :CtrlP<CR>
 nnoremap <Leader>ag :Magit<CR>
 
