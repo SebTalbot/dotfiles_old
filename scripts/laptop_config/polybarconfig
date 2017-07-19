@@ -182,7 +182,8 @@ label-unfocused-background = ${colors.background}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = " ● "
-label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.red}
+label-urgent-background = ${colors.background}
 
 [module/cpu]
 type = internal/cpu
