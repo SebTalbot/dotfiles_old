@@ -157,6 +157,14 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 " GitGutter
 let g:gitgutter_map_keys = 0
 
+" Ale
+let g:ale_javascript_eslint_executable = 'eslint'
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_javascript_jshint_executable = ''
+let g:ale_javascript_jshint_use_global = 0
+let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
+
 " MAPPING ---------------------------------------------------------------------
 let mapleader = "\<Space>"
 
