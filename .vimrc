@@ -11,8 +11,6 @@ set novisualbell
 set cursorline
 set ttimeoutlen=10
 hi Comment cterm=bold
-let g:molokai_original = 1
-colorscheme molokai
 set colorcolumn=81
 highlight ColorColumn ctermbg=235
 
