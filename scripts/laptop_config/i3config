@@ -201,7 +201,7 @@ client.urgent  	              	 #383a3b  #00ccff  #ee0000
 # Audio
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym XF86AudioMute exec "amixer -D pulse set Master 1+ toggle"
 
 # Disable title bar
 new_window pixel
@@ -216,7 +216,6 @@ focus_follows_mouse no
 exec --no-startup-id feh --bg-scale ~/pictures/background/synthwave1.jpg
 
 # Compton
-# exec --no-startup-id compton --backend glx --paint-on-overlay --glx-no-stencil --vsync opengl-swc --no-fading-openclose
 exec --no-startup-id compton --vsync opengl --no-fading-openclose
 
 # Caps as Esc
