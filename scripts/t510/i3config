@@ -225,7 +225,7 @@ exec --no-startup-id /home/snowl/scripts/switch_caps_escape.sh
 bindsym $mod+space exec /home/snowl/scripts/keyboard_lang.sh
 
 # Lockscreen
-bindsym $mod+F2 exec i3lock -c 202030
+bindsym $mod+F2 exec /home/snowl/scripts/i3lock.sh
 
 # Gaps
 smart_gaps on
