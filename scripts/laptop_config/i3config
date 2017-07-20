@@ -16,16 +16,16 @@ set $right l
 set $down j
 set $left h
 
-set $w1 1-Web
-set $w2 2-Dev
-set $w3 3-Temp
-set $w4 4-Temp
-set $w5 5-Temp
-set $w6 6-Temp
-set $w7 7-Temp
-set $w8 8-Temp
-set $w9 9-Temp
-set $w10 *-Settings
+set $w1 1
+set $w2 2
+set $w3 3
+set $w4 4
+set $w5 5
+set $w6 6
+set $w7 7
+set $w8 8
+set $w9 9
+set $w10 0
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
