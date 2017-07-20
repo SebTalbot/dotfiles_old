@@ -9,8 +9,9 @@ background-alt = #333
 foreground = #b2b2b2
 foreground-alt = #ee3333
 
+trans = #88000000
 white = #eee
-grey = #444
+grey = #444444
 pink = #d75f87
 blue = #4f97d7
 purple = #875faf
@@ -27,7 +28,7 @@ height = 14
 radius = 1.0
 fixed-center = true
 
-background = ${colors.grey}
+background = ${colors.trans}
 foreground = ${colors.foreground}
 
 ; line-size = 3
@@ -49,8 +50,8 @@ font-0 = Hack:pixelsize=10:weight=bold;2
 font-1 = Hack:pixelsize=32;2
 
 modules-left = i3 arrow
-modules-center = 
-modules-right = arrow6 xkeyboard arrow7 memory arrow6 cpu arrow7 battery arrow6 volume arrow7 date arrow6
+modules-center =
+modules-right = arrow8 xkeyboard arrow7 memory arrow6 cpu arrow7 battery arrow6 volume arrow7 date arrow6
 
 tray-position = right
 tray-background = ${colors.background}
@@ -60,13 +61,37 @@ tray-padding = 4
 ;	D E C O R A T I O N S
 ;-------------------------------------------------------------------------------
 
+[module/arrowtl]
+; grey to bg
+type = custom/text
+content = " "
+content-font = 2
+content-foreground = ${colors.pink}
+content-background = ${colors.trans}
+
+[module/title]
+; grey to bg
+type = custom/text
+content = " / S N O W L /"
+content-font = 2
+content-foreground = ${colors.background}
+content-background = ${colors.pink}
+
+[module/arrowtr]
+; background to trans
+type = custom/text
+content = " "
+content-font = 2
+content-foreground = ${colors.pink}
+content-background = ${colors.trans}
+
 [module/arrow]
-; background to grey
+; background to trans
 type = custom/text
 content = " "
 content-font = 2
 content-foreground = ${colors.background}
-content-background = ${colors.grey}
+content-background = ${colors.trans}
 
 [module/arrow1]
 ; grey to Blue
@@ -123,6 +148,14 @@ content = " "
 content-font = 2
 content-foreground = ${colors.grey}
 content-background = ${colors.background}
+
+[module/arrow8]
+; grey to bg
+type = custom/text
+content = " "
+content-font = 2
+content-foreground = ${colors.background}
+content-background = ${colors.trans}
 
 ;-------------------------------------------------------------------------------
 ;	M O D U L E S
