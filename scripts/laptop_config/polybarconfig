@@ -177,7 +177,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/i3index]
 type = internal/i3
-format = <label-state> <label-mode>
+format = <label-state>
 
 label-focused = "%name% "
 label-focused-foreground = ${colors.background}
@@ -188,15 +188,20 @@ label-urgent =
 
 [module/i3]
 type = internal/i3
-format = <label-state> <label-mode>
+format = <label-state><label-mode>
+
 index-sort = true
-wrapping-scroll = false
+enable-click = false
+enable-scroll = false
+
+ws-icon-0 = 0;*
+ws-icon-default = ○
 
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 2
-label-mode-foreground = ${colors.white}
+label-mode = " %mode% "
+label-mode-foreground = ${colors.red}
 label-mode-background = ${colors.background}
 
 ; focused = Active workspace on focused monitor
@@ -205,7 +210,7 @@ label-focused-foreground = ${colors.pink}
 label-focused-background = ${colors.background}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = " ○ "
+label-unfocused = " %icon% "
 label-unfocused-foreground = ${colors.foreground}
 label-unfocused-background = ${colors.background}
 
