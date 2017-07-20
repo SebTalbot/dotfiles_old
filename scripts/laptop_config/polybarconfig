@@ -179,7 +179,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/i3
 format = <label-state> <label-mode>
 
-label-focused = "%index% "
+label-focused = "%name% "
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.pink}
 
