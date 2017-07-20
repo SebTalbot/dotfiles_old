@@ -1,4 +1,6 @@
-" Dependencies -----------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" D E P E N D E N C I E S
+"
 " You need to run ./scripts/install-nvim-dependencies.sh
 "
 " Then install every plugins with :PluginInstall or :PluginUpdate
@@ -6,7 +8,9 @@
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
-" Plugins  ---------------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" P L U G I N S
+"
 call plug#begin('~/.config/nvim/plugged')
 
 " THEMES AND UI
@@ -58,7 +62,9 @@ Plug 'davidhalter/jedi-vim'
 call plug#end()
 filetype plugin indent on
 
-" THEME AND UI  ----------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" T H E M E   & &   U S E R I N T E R F A C E
+"
 syntax enable
 set termguicolors
 set encoding=utf-8
@@ -77,7 +83,9 @@ colorscheme space-vim-dark
 set colorcolumn=81
 highlight ColorColumn ctermbg=235
 
-" FEEL AND UTILITIES  ----------------------------------------------------------
+" ------------------------------------------------------------------------------
+" F E E L S   & &   U T I L I T I E S
+"
 set autoread
 set ignorecase
 set nobackup
@@ -100,7 +108,8 @@ set undofile
 set undodir=~/.nvim/undo
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" LANGUAGES --------------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" L A N G U A G E S   C O N F I G S
 "
 " General
 " -Omnicompletion
@@ -137,7 +146,9 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 " JavaScript
 let g:jsx_ext_required = 0
 
-" PLUGINS ----------------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" P L U G I N S   C O N F I G S
+"
 " Airline
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
@@ -165,7 +176,9 @@ let g:ale_javascript_jshint_use_global = 0
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 
-" MAPPING ---------------------------------------------------------------------
+" ------------------------------------------------------------------------------
+" C U S T O M   M A P P I N G
+"
 let mapleader = "\<Space>"
 
 " Disable C-Z
