@@ -1,5 +1,5 @@
-" ------------------------------------------------------------------------------
-" D E P E N D E N C I E S
+" - - - - - - - - - - - -
+" D E P E N D E N C I E S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 " You need to run ./scripts/install-nvim-dependencies.sh
 "
@@ -8,8 +8,8 @@
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
-" ------------------------------------------------------------------------------
-" P L U G I N S
+" - - - - - - -
+" P L U G I N S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 call plug#begin('~/.config/nvim/plugged')
 
@@ -39,7 +39,6 @@ Plug 'SirVer/ultisnips'
 Plug 'jiangmiao/auto-pairs'
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
-
 "" General
 Plug 'honza/vim-snippets'
 "" VimScript
@@ -62,8 +61,8 @@ Plug 'davidhalter/jedi-vim'
 call plug#end()
 filetype plugin indent on
 
-" ------------------------------------------------------------------------------
-" T H E M E   & &   U S E R I N T E R F A C E
+" - - - - - - - - - - - - - - - - - - - - - -
+" T H E M E   & &   U S E R I N T E R F A C E \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 syntax enable
 set termguicolors
@@ -83,8 +82,8 @@ colorscheme space-vim-dark
 set colorcolumn=81
 highlight ColorColumn ctermbg=235
 
-" ------------------------------------------------------------------------------
-" F E E L S   & &   U T I L I T I E S
+" - - - - - - - - - - - - - - - - - -
+" F E E L S   & &   U T I L I T I E S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 set autoread
 set ignorecase
@@ -108,8 +107,8 @@ set undofile
 set undodir=~/.nvim/undo
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" ------------------------------------------------------------------------------
-" L A N G U A G E S   C O N F I G S
+" - - - - - - - - - - - - - - - - -
+" L A N G U A G E S   C O N F I G S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 " General
 " -Omnicompletion
@@ -146,8 +145,8 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 " JavaScript
 let g:jsx_ext_required = 0
 
-" ------------------------------------------------------------------------------
-" P L U G I N S   C O N F I G S
+" - - - - - - - - - - - - - - -
+" P L U G I N S   C O N F I G S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 " Airline
 set laststatus=2
@@ -176,8 +175,8 @@ let g:ale_javascript_jshint_use_global = 0
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 
-" ------------------------------------------------------------------------------
-" C U S T O M   M A P P I N G
+" - - - - - - - - - - - - - -
+" C U S T O M   M A P P I N G \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 let mapleader = "\<Space>"
 
