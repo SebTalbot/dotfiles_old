@@ -79,7 +79,7 @@ set ttimeoutlen=10
 hi Comment cterm=bold
 set background=dark
 colorscheme space-vim-dark
-set colorcolumn=81
+set colorcolumn=80
 highlight ColorColumn ctermbg=235
 
 " - - - - - - - - - - - - - - - - - -
