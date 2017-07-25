@@ -102,7 +102,7 @@ set foldlevelstart=20
 set splitbelow
 set splitright
 set scrolloff=2
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set undofile
 set undodir=~/.nvim/undo
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
