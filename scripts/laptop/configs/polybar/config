@@ -402,7 +402,7 @@ type = custom/script
 interval = 1
 
 label = %output:0:45:...%
-exec = ~/scripts/poly_music.sh
+exec = ~/scripts/shared/actions/polybar/poly_music.sh
 
 [settings]
 screenchange-reload = true
