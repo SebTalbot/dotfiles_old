@@ -50,7 +50,7 @@ font-0 = Hack:pixelsize=10:weight=bold;2
 font-1 = Hack:pixelsize=32;2
 
 modules-left = i3 arrow0 i3index arrow
-modules-center =
+modules-center = music
 modules-right = arrow8 xkeyboard arrow7 memory arrow6 cpu arrow7 battery arrow6 volume arrow7 date arrow6
 
 tray-position = right
@@ -396,6 +396,13 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/music]
+type = custom/script
+interval = 1
+
+label = %output:0:45:...%
+exec = ~/scripts/poly_music.sh
 
 [settings]
 screenchange-reload = true
