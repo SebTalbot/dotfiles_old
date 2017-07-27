@@ -1,7 +1,10 @@
 #!/bin/bash
+mkdir ~/.config
+mkdir ~/.config/nvim
+ln -s -f ~/.init.vim ~/.config/nvim/init.vim
 
 # Plugins manager
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # NEED PIP3
 pip3 install --user neovim jedi mistune psutil setproctitle

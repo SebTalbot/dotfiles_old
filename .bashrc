@@ -83,17 +83,12 @@ PERL_MM_OPT="INSTALL_BASE=/home/snowl/perl5"; export PERL_MM_OPT;
 #                       - - - - - - - - \ / - - - - - - - -          
 
 # 250 Colors for VIM
-export VISUAL="vim"
-export EDITOR="$VISUAL"
-export TERM=xterm-256color
+# export VISUAL="vim"
+# export EDITOR="$VISUAL"
+# export TERM=xterm-256color
 
 # No CTRL+S
 stty -ixon
-
-# updating ruby's gems $path
-if which ruby >/dev/null && which gem >/dev/null; then
-    PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
-fi
 
 #                                   _ _ _ _ _                      
 # - - - - - - - - - - - - - - - - / P R O M P T \ - - - - - - - - - - - - - - -
