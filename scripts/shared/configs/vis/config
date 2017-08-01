@@ -15,11 +15,7 @@
 
 ##If set to false the visualizers will use mono mode instead of stereo. Some visualizers will
 ##behave differently when mono is enabled. For example, spectrum show two sets of bars.
-<<<<<<< HEAD
-audio.stereo.enabled=true
-=======
 #audio.stereo.enabled=false
->>>>>>> 838f6675bb47702decfdc1332d5ec04434e6c5d7
 
 ##Specifies how often the visualizer will change in seconds. 0 means do not rotate. Default is 0.
 #visualizer.rotation.secs=10
