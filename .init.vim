@@ -91,10 +91,9 @@ set nobackup
 set nowb
 set noswapfile
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set hidden
 set foldenable
 set foldmethod=indent
@@ -170,8 +169,6 @@ let g:gitgutter_map_keys = 0
 " Ale
 let g:ale_javascript_eslint_executable = 'eslint'
 let g:ale_javascript_eslint_use_global = 1
-let g:ale_javascript_jshint_executable = ''
-let g:ale_javascript_jshint_use_global = 0
 let g:ale_linters = {'javascript': ['eslint']}
 let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
 
