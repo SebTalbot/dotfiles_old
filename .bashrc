@@ -123,6 +123,7 @@ alias la='ls -A'
 alias cb="cd .."
 alias t="tree --dirsfirst -f"
 alias r="ranger"
+alias nterm="urxvt || pwd &"
 
 # Alias neoVim
 alias vi='nvim'
