@@ -85,7 +85,7 @@ PERL_MM_OPT="INSTALL_BASE=/home/snowl/perl5"; export PERL_MM_OPT;
 # 250 Colors for VIM
 # export VISUAL="vim"
 # export EDITOR="$VISUAL"
-# export TERM=xterm-256color
+export TERM=xterm-256color
 
 # No CTRL+S
 stty -ixon
@@ -99,7 +99,7 @@ parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 # Powerline prompt
-PS1='\[\033[46;37m\]\[$(tput bold)\] \w\[$(tput sgr0)\]\[\033[45;36m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
+PS1='\[\033[46;37m\] \w\[$(tput sgr0)\033[45;36m\] \[\033[30m\] $(__git_ps1)\[\033[40;35m\] \[\033[00m\]'
 
 # Keep it simple if running in emacs.
 case "$EMACS" in
