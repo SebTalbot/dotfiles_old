@@ -316,10 +316,11 @@ ramp-volume-3-foreground = ${colors.blue}
 ramp-volume-3-background = ${colors.background}
 
 [module/battery]
+interval = 5
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 98
+full-at = 100
 
 format-charging = <animation-charging> <label-charging>
 format-charging-foreground = ${colors.green}

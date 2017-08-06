@@ -10,9 +10,9 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \https://raw.
 pip3 install --user neovim jedi mistune psutil setproctitle
 
 # NEED NPM
+## React Lint
 sudo npm install -g eslint
 sudo npm install -g babel-eslint
 sudo npm install -g eslint-plugin-react
 sudo npm install -g react-tools
-sudo npm install -g jshint
 sudo npm install -g syntastic-react

@@ -46,7 +46,7 @@ font pango:Hack bold 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -194,10 +194,10 @@ exec --no-startup-id nm-applet
 ## Style
 # border color
 # class                          border   backgr.  text
-client.focused					 #d75f87  #d75f87  #181818 #ee66aa
-client.unfocused				 #181818  #181818  #315858
-client.focused_inactive			 #181818  #181818  #2c2e2f
-client.urgent  	              	 #383a3b  #00ccff  #ee0000
+client.focused					         #d75f87  #d75f87  #181818  #d75f87
+client.unfocused				         #181818  #181818  #315858  #181818
+client.focused_inactive			     #181818  #181818  #2c2e2f  #181818
+client.urgent  	              	 #383a3b  #00ccff  #ee0000  #181818
 
 # Audio
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"

@@ -49,11 +49,13 @@ Plug 'othree/csscomplete.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'roxma/LanguageServer-php-neovim',  {'do': 'composer install && composer run-script parse-stubs'}
 "" JavaScript
+Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
 Plug 'roxma/ncm-flow'
 """ React.js
 Plug 'mxw/vim-jsx'
+Plug 'maxmellon/vim-jsx-pretty'
 "" Python
 Plug 'davidhalter/jedi-vim'
 
@@ -65,7 +67,6 @@ filetype plugin indent on
 " T H E M E   & &   U S E R I N T E R F A C E \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 "
 syntax enable
-set termguicolors
 set encoding=utf-8
 set fileencoding=utf-8
 set wildmenu
@@ -80,7 +81,7 @@ hi Comment cterm=bold
 set background=dark
 colorscheme space-vim-dark
 set colorcolumn=80
-highlight ColorColumn ctermbg=235
+highlight ColorColumn ctermbg=234
 
 " - - - - - - - - - - - - - - - - - -
 " F E E L S   & &   U T I L I T I E S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -91,10 +92,9 @@ set nobackup
 set nowb
 set noswapfile
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set autoindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set hidden
 set foldenable
 set foldmethod=indent
@@ -144,6 +144,7 @@ let g:python_support_python3_requirements = add(get(g:,'python_support_python3_r
 
 " JavaScript
 let g:jsx_ext_required = 0
+let g:vim_jsx_pretty_colorful_config = 1
 
 " - - - - - - - - - - - - - - -
 " P L U G I N S   C O N F I G S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
@@ -168,12 +169,12 @@ let g:UltiSnipsRemoveSelectModeMappings = 0
 let g:gitgutter_map_keys = 0
 
 " Ale
-let g:ale_javascript_eslint_executable = 'eslint'
+" let g:ale_javascript_eslint_executable = 'eslint'
 let g:ale_javascript_eslint_use_global = 1
-let g:ale_javascript_jshint_executable = ''
-let g:ale_javascript_jshint_use_global = 0
-let g:ale_linters = {'javascript': ['eslint']}
-let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
+" let g:ale_linter_aliases = {'javascript.jsx': 'javascript', 'jsx': 'javascript'}
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
 
 " - - - - - - - - - - - - - -
 " C U S T O M   M A P P I N G \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
