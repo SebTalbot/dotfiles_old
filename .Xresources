@@ -13,7 +13,7 @@ URxvt.scrollstyle: plain
 URxvt*termName: xterm-256color
 URxvt.transparent: false
 URxvt.visualBell: false
-urxvt*depth: 32
+URxvt*depth: 32
 URxvt.letterSpace: -1
 
 ! Colors
@@ -32,11 +32,11 @@ URxvt.letterSpace: -1
 #define col8 #ececec
 
 *.foreground:   #33ccee
-*.background:   col1
+*.background:   rgba:2900/2b00/2e00/cccc
 *.cursorColor:  col8
 *.cursorBlink: true
 
-*.color0:       col1
+*.color0:       rgba:2900/2b00/2e00/cccc
 *.color1:       col2
 *.color2:       col3
 *.color3:       col4
@@ -44,7 +44,7 @@ URxvt.letterSpace: -1
 *.color5:       col6
 *.color6:       col7
 *.color7:       col8
-*.color8:       col1
+*.color8:       rgba:2900/2b00/2e00/cccc
 *.color9:       col2
 *.color10:      col3
 *.color11:      col4
