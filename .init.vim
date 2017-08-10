@@ -14,9 +14,7 @@ let g:python3_host_prog = '/usr/bin/python3'
 call plug#begin('~/.config/nvim/plugged')
 
 " THEMES AND UI
-Plug 'morhetz/gruvbox'
 Plug 'liuchengxu/space-vim-dark'
-Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
@@ -82,6 +80,7 @@ set background=dark
 colorscheme space-vim-dark
 set colorcolumn=80
 highlight ColorColumn ctermbg=234
+highlight Normal ctermbg=black
 
 " - - - - - - - - - - - - - - - - - -
 " F E E L S   & &   U T I L I T I E S \ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
