@@ -32,11 +32,11 @@ URxvt.letterSpace: -1
 #define col8 #ececec
 
 *.foreground:   #33ccee
-*.background:   rgba:2900/2b00/2e00/cccc
+*.background:   rgba:2900/2b00/2e00/dede
 *.cursorColor:  col8
 *.cursorBlink: true
 
-*.color0:       rgba:2900/2b00/2e00/cccc
+*.color0:       rgba:2900/2b00/2e00/dede
 *.color1:       col2
 *.color2:       col3
 *.color3:       col4
@@ -44,7 +44,7 @@ URxvt.letterSpace: -1
 *.color5:       col6
 *.color6:       col7
 *.color7:       col8
-*.color8:       rgba:2900/2b00/2e00/cccc
+*.color8:       rgba:2900/2b00/2e00/dede
 *.color9:       col2
 *.color10:      col3
 *.color11:      col4
