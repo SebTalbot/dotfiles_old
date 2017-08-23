@@ -251,3 +251,7 @@ nnoremap <leader>ej :ALENext<CR>
 nnoremap <leader>lh :set ft=html<CR>
 nnoremap <leader>lp :set ft=php<CR>
 nnoremap <leader>lj :set ft=javascript<CR>
+
+" Open important files O-
+nnoremap <leader>od :e ~/.init.vim<CR>
+nnoremap <leader>oa :e ~/.agenda.org<CR>
