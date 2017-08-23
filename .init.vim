@@ -24,11 +24,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'simnalamburt/vim-mundo'
 Plug 'kien/ctrlp.vim'
 Plug 'jreybert/vimagit'
+Plug 'jceb/vim-orgmode'
 
 " COMMANDS
 Plug 'rbgrouleff/bclose.vim'
 Plug 'tpope/vim-surround'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-speeddating'
 
 " AUTOCOMP AND SNIPPETS
 Plug 'w0rp/ale'
@@ -237,7 +239,7 @@ nnoremap <leader>tn :tabnew %<CR>
 " Manipulate buffers B-
 nnoremap <leader>bb :ls<CR>:b<space>
 nnoremap <leader>bt <C-^>
-nnoremap <leader>bd :Bclose<CR>
+nnoremap <leader>bd :Bclose!<CR>
 nnoremap gb :bn<CR>
 nnoremap gB :bp<CR>
 
